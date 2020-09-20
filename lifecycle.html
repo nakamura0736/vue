@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifecycle理解</title>
+</head>
+<body>
+<div id="app">
+    <h1>Hello World</h1>
+    <button v-on:click="showEl">show el</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+    el: '#app',
+    data: {
+    },
+    methods:{
+        showEl : function(){
+            this.$el.innerHTML = "<h1>Hello Vueオラオラ</h1>";
+            console.log('show elしまっせ')
+            console.log(this.$el)
+        }
+    }
+    })
+</script>
+</body>
+</html>
